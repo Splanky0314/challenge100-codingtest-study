@@ -16,8 +16,11 @@ int main() {
 	cin >> n;
 	for(int i=0; i<n; i++) {
 		cin >> tmp;
-		if(tmp >= 0) {
+		if(tmp > 0) {
 			sum += tmp;
+		}
+		else if(tmp == 0) {
+			arr.push_back(tmp);
 		}
 		else if(sum != 0) {
 			arr.push_back(sum);
@@ -70,11 +73,11 @@ int main() {
 	// } cout << endl << endl;
 
 
-	int maxval = -100000001;
+	int maxval = -100000001; 
 	int onlypositive = true;
 	// 없앨 -를 기준으로 잡고 / -가 없으면 제거하지 않는거지
 	for(int i=0; i<arr.size(); i++) {
-		if(arr[i] < 0) {
+		if(arr[i] <= 0) {
 			onlypositive = false;
 			sum = left[i] + right[i] - arr[i] * 2;
 			// cout << sum << " "; // for test
