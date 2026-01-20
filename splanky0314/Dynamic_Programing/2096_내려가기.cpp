@@ -16,7 +16,6 @@ int main() {
 	cout.tie(NULL);
 	
 	cin >> n;
-	fill(&mindp[0][0], &mindp[n][2], 1000001);
 	for(int i=0; i<n; i++) 
 		cin >> map[i][0] >> map[i][1] >> map[i][2];
 	
