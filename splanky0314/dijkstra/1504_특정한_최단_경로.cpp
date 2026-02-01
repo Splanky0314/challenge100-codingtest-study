@@ -20,9 +20,9 @@ int dijkstra(int x, int dest) {
 	while(true) {
 		if(x == dest) return dist[x];
 
-		// for test
-		for(int i=1; i<=n; i++) cout << dist[i] << " ";
-		cout << endl;
+		// // for test
+		// for(int i=1; i<=n; i++) cout << dist[i] << " ";
+		// cout << endl;
 
 		for(pair<int,int> tmp: g[x]) {
 			if(dist[tmp.first] > dist[x] + tmp.second) {
@@ -30,9 +30,9 @@ int dijkstra(int x, int dest) {
 			}
 		}
 
-		// for test
-		for(int i=1; i<=n; i++) cout << dist[i] << " ";
-		cout << endl;
+		// // for test
+		// for(int i=1; i<=n; i++) cout << dist[i] << " ";
+		// cout << endl;
 
 		int minidx, minval = -1;
 		for(int i=1; i<=n; i++) {
